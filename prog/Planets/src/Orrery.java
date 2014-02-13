@@ -16,6 +16,10 @@ public class Orrery {
 		boolean running = true;
 		
 		while (true) {
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException e) {
+			}
 			String pip1 = p1.getPip();
 			String pip2 = p2.getPip();
 			String pip3 = p3.getPip();
