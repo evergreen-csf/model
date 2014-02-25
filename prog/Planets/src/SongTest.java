@@ -52,7 +52,7 @@ public class SongTest {
 	
 	@Test
 	public void testVerse1() {
-		String result = Song.verse1();
+		String result = Animal.verse1();
 		//System.out.println(result);
 		//System.out.println(verse1);
 //		for (int i = 0; i < result.length(); i++) {
@@ -63,7 +63,7 @@ public class SongTest {
 
 	@Test
 	public void testVerse2() {
-		String result = Song.verse2();
+		String result = Animal.verse2();
 		assertStringEquals(result, verse2);
 	}
 
