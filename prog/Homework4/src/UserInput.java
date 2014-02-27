@@ -15,13 +15,12 @@ public class UserInput {
 
 		String line = null;
 		
-		// TODO: Write a do / while loop containing the following statements, while
-		// TODO: the variable line is not equal to null.
-		
+		do{
 			line = reader.readLine();
-			
+		
+		
 			// TODO: Define a String array called tokens that is to be split by whitespaces
-			
+			String[] tokens = line.split(" ");
 			// The first two items on a line from the file are a name and a gender
 			String name = tokens[0];
 			String gender = tokens[1];
@@ -31,18 +30,23 @@ public class UserInput {
 
 			// TODO Loop over the items in the tokens array, starting with i = 2
 			// TODO with the following loop body
+		
+			for(int i = 2 ; i < tokens.length ; i++){
 			
 				rankByDecade.add(Integer.parseInt(tokens[i]));
 				System.out.println(tokens[i]);
 
+			}
 			// 
 			if (chosenName.equals(name)) {
 				chosenBaby = newBaby;
 			}
 
+			
 			// TODO: Create a new BabyName object passing the variables name, gender, and rankByDecade as params
 			// TODO:
-			
+		}
+		while(line != null);
 		
 		
 		reader.close();
