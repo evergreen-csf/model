@@ -1,0 +1,10 @@
+Paul Pham - phamp
+Colin Robinson - robcol15
+
+Weekly Goals (7 hours):
+Read "Thinking in Java" Chapter 2: Everything is an object.
+Finish iJava Chapters 5 and 6.
+
+Partner Evaluation:
+Colin was able to finish iJava Chapter 4. He had a question about arrays and is stuck on Exercise 4.2,
+so he skipped it for now.
