@@ -3,7 +3,7 @@
 {C3} : Import statements and scanner
 
 {W1} : Set goals and evaluated.
-{W2} : Set goals and evaluated.
+{W2} : Set goals and evaluated, turned in worksheet 2.
 {W3} : Set goals.
 
 10 hours total on iJava so far.
