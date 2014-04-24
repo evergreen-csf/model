@@ -4,6 +4,7 @@
 
 {W1} : Set goals and evaluated.
 {W2} : Set goals and evaluated, turned in worksheet 2.
-{W3} : Set goals.
+{W3} : Set goals
+{W4} : Set goals and evaluated.
 
 10 hours total on iJava so far.
