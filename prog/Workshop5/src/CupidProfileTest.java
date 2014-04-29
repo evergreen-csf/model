@@ -27,7 +27,7 @@ public class CupidProfileTest {
 		others.add(profiles[1]);
 		others.add(profiles[2]);
 		CupidProfile betterMatch = profiles[0].getBestMatch(others);
-		assertEquals(betterMatch, profiles[1]);
+		assertEquals(betterMatch, profiles[2]);
 	}
 
 }
