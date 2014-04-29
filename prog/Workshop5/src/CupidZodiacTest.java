@@ -24,5 +24,10 @@ public class CupidZodiacTest {
 		CupidZodiac opposite = mySign.findOpposite();
 		assertEquals(opposite, CupidZodiac.TIGER);
 	}
+	
+	@Test
+	public void testPrint() {
+		System.out.println(CupidZodiac.TIGER);
+	}
 
 }

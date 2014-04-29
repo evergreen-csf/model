@@ -53,9 +53,9 @@ public class CupidMatcher {
 	}
 	
 	public static void main(String[] args) {
-		names = new String[] {"Ada Lovelace", "Elon Musk", "Lao-Tzu"};
-		pets = new CupidPet[] {CupidPet.CATS, CupidPet.DOGS, CupidPet.CATS};
-		signs = new CupidZodiac[] {CupidZodiac.MONKEY, CupidZodiac.RAT, CupidZodiac.DRAGON};
+		names = new String[]      {"Ada Lovelace",     "Elon Musk",     "Lao-Tzu"};
+		pets  = new CupidPet[]    {CupidPet.CATS,      CupidPet.DOGS,   CupidPet.CATS};
+		signs = new CupidZodiac[] {CupidZodiac.MONKEY, CupidZodiac.RAT, CupidZodiac.OX};
 		
 		// Find the better match for Ada Lovelace
 		String betterMatchName = getNameOfBetterMatch(
