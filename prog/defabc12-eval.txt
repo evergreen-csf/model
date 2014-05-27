@@ -2,6 +2,12 @@
 {C2} : Java objects and classes
 {C3} : Import statements and scanner
 
+
+{L1} : Encapsulation, getters and setters
+{L5} : Java Collections API: ArrayList
+{L8} : Enums
+{L9} : Incremental development: working and committing one piece of a homework at a time.
+
 {W1} : Set goals and evaluated.
 {W2} : Set goals and evaluated, turned in worksheet 2.
 {W3} : Set goals

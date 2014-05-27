@@ -17,5 +17,5 @@ public abstract class Boarder extends Athlete {
 		this.position = PositionEnum.FIRST;
 		this.direction = DirectionEnum.FORWARD;
 	}
-
+	
 }
