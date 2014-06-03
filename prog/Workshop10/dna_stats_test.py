@@ -1,5 +1,8 @@
 import unittest
 
+def create DNAStats(seq):
+  return DNACounter(seq)
+
 class DNAStatsTest(unittest.TestCase):
 
   seq1 = "CTAG"
