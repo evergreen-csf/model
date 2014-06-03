@@ -1,6 +1,6 @@
 import unittest
 
-def create DNAStats(seq):
+def createDNAStats(seq):
   return DNACounter(seq)
 
 class DNAStatsTest(unittest.TestCase):
