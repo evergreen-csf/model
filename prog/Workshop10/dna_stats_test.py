@@ -22,7 +22,7 @@ class DNAStatsTest(unittest.TestCase):
 
   def testGCFraction(self):
     """Test that the correct fraction of GC base pairs is returned."""
-    assert (abs(self.stats1.getGCFraction() - 0.25 ) < 0.001)
+    assert (abs(self.stats1.getGCFraction() - 0.5 ) < 0.001)
 
 if __name__ == "__main__":
     unittest.main() # run all tests
