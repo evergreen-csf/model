@@ -22,7 +22,7 @@ public class DNAStatsTest {
 
 	@Test
 	public void testGetGCFraction() {
-		assertEquals(0.25, stats1.getGCFraction(), 0.001);
+		assertEquals(0.5, stats1.getGCFraction(), 0.001);
 	}
 
 }

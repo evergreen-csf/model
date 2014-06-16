@@ -4,14 +4,21 @@
  */
 public class DNACounter implements DNAStats {
 	
+	String sequence;
+	
 	public DNACounter(String sequence) {
-		
+		this.sequence = sequence;
 	}
 	
 	@Override
 	public float getGCFraction() {
-		// TODO Auto-generated method stub
-		return 0;
+		int counter = 0;
+		for (char c : sequence.toCharArray()) {
+			if (c == 'G' || c == 'C' ) {
+				counter++;
+			}
+		}
+		return ((float)counter) / sequence.length();
 	}
 
 	@Override
