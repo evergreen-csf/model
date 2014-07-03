@@ -1,0 +1,62 @@
+
+Kevin Douglas <doukev12>
+
+
+__Reflection__
+
+Some game data for my submitted Player.class
+(for a 10 x 10 board at 10000ms time limit, depth-2 look ahead)
+
+FINAL >>> doukev12 won 100 out of 100 games (100%)
+FINAL >>> doukev12 won 100 out of 100 games (100%)
+FINAL >>> doukev12 won 97 out of 100 games (97%)
+FINAL >>> doukev12 won 979 out of 1000 games (98%)
+FINAL >>> doukev12 won 99 out of 100 games (99%)
+FINAL >>> doukev12 won 99 out of 100 games (99%)
+FINAL >>> doukev12 won 981 out of 1000 games (98%)
+
+SUMMARY:
+Can you effectively predict, as a trend, which way a Konane game will go based on an n-move look ahead calculating the difference in player moves (increase) and/or the difference in opponent moves (decrease)? How about gain or loss of tokens? What about looking ahead 1-move and determining if the opponent has 0 (zero) moves, vs. own-side has > 0 moves? Is it useful looking ahead for these conditions n-moves ahead?
+
+I've systematically tried different heuristic approaches, some using with weighted values and some without, and combinations of these approaches.
+
+Likewise I've tried looking (branching) forward to different depths. Of course branching is expensive for more than several branches (moves) across, so I've also tried placing various limits on the width of branching (if i > n branches break out of loop) which did not benefit my end results. The max depth that doesn't consistently run out of time seems to be 2 deep, but adding the second layer only seems to improve the final win-loss ratio by 1-2% (random factor considered) and makes testing quite a bit slower. I have noticed that seemingly small adjustments to the heuristic weight values can have rather large (1-2%) outcomes in the final result.
+
+The best case scenarios I've come up with across all tested combinations have win percentages in the range of:
+
+Using a 10 x 10 grid with 10000ms time limit, with a 1 level look ahead.
+> 90% constantly
+93 - 100% variably
+95 - 97% regularly
+96% usually
+* looking ahead 2 levels increases the average by 2%
+
+
+REFLECTION:
+Challenges included: (1) learn the existing Konane package environment of public constants and methods, (2) determine the best AI approach for my player method, and (3) modify the Simulator class to remove verbose printouts and to run multiple loops of the game—only printing a result summary. I also wanted the option to randomize game board sizes, game times, and starting player.
+
+I started out looking through the Konane code packages and doing a little brainstorming on what tactic to take. From there I did some online research to see what other methods people have used to programmatically win at Konane. What I learned is that people universally do a Minimax algorithm to test for the best branch. I don’t know what minimax is so I decided to do recursive function branching of game moves and propagate the results back to the main decision loop to select my move. I could have taught myself the minimax approach, and doing so would have had some merit, but I decided time was a consideration in finishing this project.
+
+My original idea was to track the number of moves available to me from one round to the next for both myself and my opponent. 
+
+Other approaches (heuristics) that people have used include getting either the difference or the ratio of available moves between the player and the opponent, either with or without a weight to “tune” the algorithm; also to compare not how many moves each side has but how many movable pieces they have. There are other approaches but these had the best results across testing scenarios.
+
+In making my recursive method I tried quite a few combinations of testing heuristics and general configurations and consistently achieved in the mid-high ninetieth percentile for most of them. What my challenge soon became was getting those extra couple percentage points out of the system.
+
+It’s worth noting that running out of time is a serious consideration and branching greater than 2-depth recursively usually exceeded available time limits. Also, that I could get around 96% on average only looking one branch ahead, and looking 2 branches (one full turn) ahead only improved that to ~98% (depending on various factors). 
+
+Tuning the weights by only a couple digits can have significant outcomes to the final win-loss percentage.
+
+Another alternative I tested was between
+>>make all of my available moves>>make a random opponent move>>make all of my available moves
+[OR]
+>>make all of my available moves>>make all of my opponent’s available moves
+
+I found that the first approach (surprisingly) returned better results under the configuration I tested it with (~96% instead of ~91%). I can’t say whether the second approach would return even better results using a different system.
+
+Overall I made six different Player classes and tested multiple configurations in each one of them, running thousands of games in total. The final winning heuristic is a simple formula with a couple preliminary tests for win-loss of self and opponent at each branch.
+
+This is a project that could be continued and tuned indefinitely. Playing against different board sizes, playing against different opponent logics, etc. but I feel that 98% is a pretty good place to start.
+
+
+
